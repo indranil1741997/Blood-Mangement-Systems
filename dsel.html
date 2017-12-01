@@ -1,0 +1,74 @@
+<html>
+<style>
+    .button {
+        background-color: olive;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.5s;
+        width : 250px;
+        box-shadow: 4px 4px #E0FFFF;
+    }
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    .button:hover
+    {
+        background-image:none;
+        background-color:black;
+        opacity: 0.6;
+    }
+    .button1 {
+        margin-top: 50px;
+        margin-left: 20px;
+        
+    }  
+    div{
+        font-size: 5px;
+    }
+</style>
+<body style="background:#f7f7f7">
+    <form action="php_checkbox1.php" method="post">
+        <h1 style="text-align : center"><b>Select Blood Group Availibility</b></h1><br>
+        <h2 style="text-align : center"><input type="checkbox" name="check_list[]" value="O_plus">   O+
+        <input type="checkbox" style="margin-left : 70px"  name="check_list[]" value="O_neg">   O-<br><br>
+        <input type="checkbox" name="check_list[]" value="A_plus">   A+
+        <input type="checkbox" style="margin-left : 70px" name="check_list[]" value="A_neg">   A-<br><br>
+        <input type="checkbox" name="check_list[]" value="B_plus">   B+
+        <input type="checkbox" style="margin-left : 70px" name="check_list[]" value="B_neg">   B-<br><br>
+        <input type="checkbox" style="margin-left : 14px" name="check_list[]" value="AB_plus">   AB+
+        <input type="checkbox" style="margin-left : 53px" name="check_list[]" value="AB_neg">   AB-<br><br>
+        <input type="submit" class="button button1" style="background-color:blue" name="submit" Value="Submit"/>
+        </h2>
+    </form>
+ 
+</body>    
+</html>
